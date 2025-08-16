@@ -18,12 +18,12 @@ import Socials from "./Socials";
 const Hero = () => {
   return (
     <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none px-4 xl:px-0">
-      <div className="mx-[7rem]  h-full  ">
+      <div className=" h-full xl:mx-[7rem]  mx-1">
         <div className="flex justify-between gap-x-8 ">
 
           {/* text */}
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left gap-y-4" >
-            <div className="text-sm uppercase font-semibold  text-primary tracking-[4px] -mt-[70px] ">web Developer</div>
+            <div className="text-sm uppercase font-semibold  text-primary tracking-[4px] xl:-mt-[70px] ">web Developer</div>
             <h1 className="h1 mb-4 ">Hello, my name is Sagar Thkaur</h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0"> I am a Full-Stack web developer currently working on NextJS and PostgreSQL.As a highly adaptable and skilled web developer,I am passionate about creating functional and aesthetically pleasing websites that provide a great user experience.</p>
 

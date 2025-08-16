@@ -23,7 +23,7 @@ function Header() {
     <header className={`${
         header ? "py-4 bg-white shadow-lg dark:bg-accent"
          : "py-4 dark:bg-transparent"
-      } sticky top-0 z-30 transition-all px-[6rem]`}>
+      } sticky top-0 z-30 transition-all xl:px-[6rem] px-[1rem]`}>
       <div className="container mx-auto">
         <div className="flex items-center justify-between py-2">
           <Logo />
