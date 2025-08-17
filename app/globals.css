@@ -166,9 +166,21 @@
   background-position: center;
 }
 
+@layer components {
+  .section-title {
+    @apply text-4xl font-bold relative w-max flex items-center justify-between gap-x-3;
+  }
+
+  .section-title::before {
+    @apply content-[''] block w-8 h-[3px] bg-blue-500 rounded;
+  }
+}
+
+
 .badge {
   @apply z-10 w-[200px] h-[68px] bg-white dark:bg-neutral-800 shadow-2xl p-4 rounded-[10px] flex items-center gap-x-4 ;
 }
+
 
 
 
