@@ -51,6 +51,27 @@ const Hero = () => {
 
           {/* image */}
           <div className="hidden xl:flex relative -mt-4">
+
+
+            {/* badges */}
+            {/* <div className="flex  gap-y-1 absolute dark:shadow-2xl-white top-0 left-0 flex-col z-10"> */}
+            <Badge
+            containerStyles="absolute top-[24%] -left-[5rem] z-10"
+             icon={<RiBriefcase4Fill/> }
+            endCountNum={1}
+            badgeText="Year of Experience"  />
+            {/* </div> */}
+
+            {/* badge2 */}
+             <Badge
+            containerStyles="absolute top-[70%] -left-[3rem] z-10"
+             icon={<RiTodoFill/> }
+            endCountNum={10}
+            endCountText={"+"}
+            badgeText="Finished Project"  />
+
+
+
             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark text-[5rem] w-[600px] h-[515px] bg-no-repeat absolute -top-1 -right-2"></div>
             <DevImg
               containerStyles="bg-hero_shape w-[537px] h-[485px] bg-no-repeat relative bg-bottom"
