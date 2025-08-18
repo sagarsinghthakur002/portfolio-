@@ -1,9 +1,8 @@
 import DevImg from "./DevImg";
-import Image from "next/image";
 import sagar from '../hero/sagar.png'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
-
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs" // ✅ use your wrapper
 import { User2, MailIcon, HomeIcon, PhoneCall, GraduationCap, Calendar, Briefcase } from "lucide-react";
+
 
 const infoData = [
   {
@@ -85,42 +84,48 @@ const skillData = [
   },
 ];
 
+
+
 const About = () => {
-  const getData = (arr, title) => {
+    const getData = (arr, title) => {
     return arr.find(item => item.title.toLowerCase() === title.toLowerCase());
   };
-
   return (
     <section>
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">About Me</h2>
 
-        <div className="flex flex-col xl:flex-row  ">
-          <div className="hidden xl:flex flex-1 relative">
+        <div className="flex  flex-row px-[7rem]  ">
+          {/* left image */}
+          {/* <div className="hidden xl:flex  relative">
             <DevImg 
-            containerStyles="bg-about_shape_light dark:bg-about_shap_dark w-[505px] h-[505px] bg-no-repeat relative"
-            imgSrc={sagar} />
-          </div>
+              containerStyles="bg-about_shape_light dark:bg-about_shap_dark w-[505px] h-[505px] bg-no-repeat relative"
+              imgSrc={sagar} 
+            />
+          </div> */}
 
-
-          {/* table */}
+          {/* right tabs */}
           <div className="flex-1">
-            <Tabs defaultValue="personal" className="w-full">
-              <TabsList>
-                <TabsTrigger value="personal">Personal Info</TabsTrigger>
-                <TabsTrigger value="qualification">Qualification</TabsTrigger>
-                <TabsTrigger value="skills">Skills</TabsTrigger>
+            <Tabs defaultValue="personal">
+              <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520] xl:border dark:border:none">
+                <TabsTrigger className='w-[162] xl:w-auto ' value="personal">Personal Info</TabsTrigger>
+                <TabsTrigger className='w-[162] xl:w-auto ' value="qualification">Qualification</TabsTrigger>
+                <TabsTrigger className='w-[162] xl:w-auto ' value="skills">Skills&Tools</TabsTrigger>
               </TabsList>
 
               <div className="text-lg mt-12 xl:mt-8">
-                <TabsContent value="personal">personal info</TabsContent>
+                {/* personal */}
+                <TabsContent value="personal">
+                  <div className="text-center xl:text-left">
+                    <h3 className="h3 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, ducimus.</h3>
+                    <p className="subtitle max-w-xl max-auto xl:mx:0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus magni tenetur iste quod quis fugiat voluptas unde blanditiis reiciendis.</p>
+                  </div>
+                </TabsContent>
                 <TabsContent value="qualification">qualification info</TabsContent>
                 <TabsContent value="skills">skills info</TabsContent>
               </div>
             </Tabs>
           </div>
-
-
         </div>
       </div>
     </section>
