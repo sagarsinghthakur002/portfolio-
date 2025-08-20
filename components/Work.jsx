@@ -52,7 +52,7 @@ const projectData = [
 
 const Work = () => {
   return (
-    <section className="relative mb-12 xl:mb-48 xl:px-[7rem] px-[1rem] ">
+    <section className="relative mb-12 xl:mb-28 xl:px-[7rem] px-[1rem] ">
       <div className="container mx-auto">
         {/* text */}
         <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
