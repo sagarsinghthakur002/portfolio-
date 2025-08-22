@@ -74,10 +74,10 @@ const About = () => {
           <div className="">
             
               <Tabs defaultValue="personal">
-  <TabsList className="grid grid-cols-3 w-full xl:max-w-auto xl:border dark:border-0">
-    <TabsTrigger className="w-auto px-2 sm:px-4" value="personal">Personal Info</TabsTrigger>
-    <TabsTrigger className="w-auto px-2 sm:px-4" value="qualification">Qualification</TabsTrigger>
-    <TabsTrigger className="w-auto px-2 sm:px-4" value="skills">Skills & Tools</TabsTrigger>
+  <TabsList className="grid grid-cols-3 w-auto xl:max-w-auto xl:border dark:border-0">
+    <TabsTrigger className="w-auto px-2 sm:px-1" value="personal">Personal Info</TabsTrigger>
+    <TabsTrigger className="w-auto px-2 sm:px-1" value="qualification">Qualification</TabsTrigger>
+    <TabsTrigger className="w-auto px-2 sm:px-1" value="skills">Skills & Tools</TabsTrigger>
   </TabsList>
 
 
