@@ -91,7 +91,7 @@ const About = () => {
     <section className=" h-[85vh] "> 
       <div className="container "> 
         <h2 className="section-title mb-9 xl:mb-20 text-center mx-auto">About Me</h2> 
-        <div className="flex flex-row xl:px-[20rem] px-4 "> 
+        <div className="flex flex-row xl:px-[15rem] px-4 "> 
           {/* left image */} 
           {/* <div className="hidden xl:flex relative"> 
             <DevImg containerStyles="bg-about_shape_light dark:bg-about_shap_dark w-[505px] h-[505px] bg-no-repeat relative" imgSrc={sagar} /> 
