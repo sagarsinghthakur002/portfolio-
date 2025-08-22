@@ -77,7 +77,7 @@ const skillData = [
     title: "Tools", 
     data: [ 
       { name: "VSCode", imgPath: "/components/skill/vscode.webp" }, 
-      { name: "Postman", imgPath: "/components/skill/postman.webp" }, 
+      
       { name: "Figma", imgPath: "/components/skill/figma.webp" }, 
     ], 
   }, 
@@ -173,10 +173,10 @@ const About = () => {
                     {skillData.map((section, idx) => ( 
                       <div key={idx} className="mb-8"> 
                         <h4 className="text-xl font-semibold mb-4">{section.title}</h4> 
-                        <div className="border-b border-border mb-6"></div> 
+                        <div className="border-b border-border mb-4"></div> 
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6"> 
                           {section.data.map((item, index) => ( 
-                            <div key={index} className="flex flex-col items-center gap-2 mb-10"> 
+                            <div key={index} className="flex flex-col items-center gap-2 "> 
                               <img src={item.imgPath} alt={item.name} className="w-12 h-12 object-contain" /> 
                               <span className="text-sm text-gray-300">{item.name}</span> 
                             </div> 
