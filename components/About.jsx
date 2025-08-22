@@ -98,7 +98,7 @@ const About = () => {
           </div> */} 
           {/* right tabs */} 
           <div className="flex-1"> 
-            <Tabs defaultValue="personal"> 
+            <Tabs defaultValue="personal xl:px-[5rem]"> 
               <TabsList className="w-full grid grid-cols-3 xl:max-w-[520] xl:border dark:border:none"> 
                 <TabsTrigger className='w-auto xl:w-auto ' value="personal">Personal Info</TabsTrigger> 
                 <TabsTrigger className='w-auto xl:w-auto ' value="qualification">Qualification</TabsTrigger> 
