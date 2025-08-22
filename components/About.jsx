@@ -90,7 +90,7 @@ const About = () => {
 
   return ( 
     <section className=" h-[85vh] "> 
-      <div className="container "> 
+      <div className="container  "> 
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">About Me</h2> 
         <div className="flex flex-row xl:px-[7rem] px-4 "> 
           {/* left image */} 
@@ -101,7 +101,7 @@ const About = () => {
           {/* right tabs */} 
           <div className="flex-1"> 
             <Tabs defaultValue="personal"> 
-              <TabsList className="w-full grid grid-cols-3 xl:max-w-[520] xl:border dark:border:none"> 
+              <TabsList className="w-full grid grid-cols-3 xl:border dark:border:none"> 
                 <TabsTrigger className='w-[162] xl:w-auto ' value="personal">Personal Info</TabsTrigger> 
                 <TabsTrigger className='w-[162] xl:w-auto ' value="qualification">Qualification</TabsTrigger> 
                 <TabsTrigger className='w-[162] xl:w-auto ' value="skills">Skills&Tools</TabsTrigger> 
