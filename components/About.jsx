@@ -91,7 +91,7 @@ const About = () => {
   return ( 
     <section className=" h-[85vh] "> 
       <div className="container  "> 
-        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">About Me</h2> 
+        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto items-center">About Me</h2> 
         <div className="flex flex-row xl:px-[7rem] px-4 "> 
           {/* left image */} 
           {/* <div className="hidden xl:flex relative"> 
