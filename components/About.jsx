@@ -100,9 +100,9 @@ const About = () => {
           <div className="flex-1"> 
             <Tabs defaultValue="personal"> 
               <TabsList className="w-full grid grid-cols-3 xl:max-w-[520] xl:border dark:border:none"> 
-                <TabsTrigger className='w-[162] xl:w-auto ' value="personal">Personal Info</TabsTrigger> 
-                <TabsTrigger className='w-[162] xl:w-auto ' value="qualification">Qualification</TabsTrigger> 
-                <TabsTrigger className='w-[162] xl:w-auto ' value="skills">Skills&Tools</TabsTrigger> 
+                <TabsTrigger className='w-auto xl:w-auto ' value="personal">Personal Info</TabsTrigger> 
+                <TabsTrigger className='w-auto xl:w-auto ' value="qualification">Qualification</TabsTrigger> 
+                <TabsTrigger className='w-auto xl:w-auto ' value="skills">Skills&Tools</TabsTrigger> 
               </TabsList> 
               <div className="text-lg mt-12 xl:mt-8"> 
                 {/* personal */} 
