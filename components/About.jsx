@@ -72,12 +72,14 @@ const About = () => {
 
           {/* Right tabs */}
           <div className="flex-1">
-            <Tabs defaultValue="personal">
-              <TabsList className="w-full grid grid-cols-3 xl:max-w-[520px] xl:border dark:border-0">
-                <TabsTrigger className="w-[162px] xl:w-auto" value="personal">Personal Info</TabsTrigger>
-                <TabsTrigger className="w-[162px] xl:w-auto" value="qualification">Qualification</TabsTrigger>
-                <TabsTrigger className="w-[162px] xl:w-auto" value="skills">Skills & Tools</TabsTrigger>
-              </TabsList>
+            
+              <Tabs defaultValue="personal">
+  <TabsList className="grid grid-cols-3 w-full xl:max-w-auto xl:border dark:border-0">
+    <TabsTrigger className="w-auto px-2 sm:px-4" value="personal">Personal Info</TabsTrigger>
+    <TabsTrigger className="w-auto px-2 sm:px-4" value="qualification">Qualification</TabsTrigger>
+    <TabsTrigger className="w-auto px-2 sm:px-4" value="skills">Skills & Tools</TabsTrigger>
+  </TabsList>
+
 
               <div className="text-lg mt-12 xl:mt-8">
                 {/* personal */}
