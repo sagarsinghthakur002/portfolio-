@@ -88,9 +88,9 @@ const About = () => {
     return arr.find(item => item.title.toLowerCase() === title.toLowerCase()); 
   }; 
   return ( 
-    <section className=" h-[85vh] w-full "> 
-      <div className="container  "> 
-        <h2 className="section-title mb-9 xl:mb-20 text-center mx-auto">About Me</h2> 
+    <section className=" h-[85vh] "> 
+      <div className="container "> 
+        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">About Me</h2> 
         <div className="flex flex-row xl:px-[7rem] px-4 "> 
           {/* left image */} 
           {/* <div className="hidden xl:flex relative"> 
@@ -98,12 +98,12 @@ const About = () => {
           </div> */} 
           {/* right tabs */} 
           <div className="flex-1"> 
-            <Tabs defaultValue="personal w-full"> 
-              <TabsList className=" grid grid-cols-3 xl:md:w-full] xl:border dark:border:none "> 
+            <Tabs defaultValue="personal"> 
+              <TabsList className="w-full grid grid-cols-3 xl:max-w-[520] xl:border dark:border:none"> 
                 <TabsTrigger className='w-auto xl:w-auto ' value="personal">Personal Info</TabsTrigger> 
                 <TabsTrigger className='w-auto xl:w-auto ' value="qualification">Qualification</TabsTrigger> 
                 <TabsTrigger className='w-auto xl:w-auto ' value="skills">Skills&Tools</TabsTrigger> 
-              </TabsList>
+              </TabsList> 
               <div className="text-lg mt-12 xl:mt-8"> 
                 {/* personal */} 
                 <TabsContent value="personal"> 
