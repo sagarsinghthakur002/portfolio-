@@ -71,7 +71,7 @@ const About = () => {
           </div> */}
 
           {/* Right tabs */}
-          <div className="flex-1">
+          <div className="">
             
               <Tabs defaultValue="personal">
   <TabsList className="grid grid-cols-3 w-full xl:max-w-auto xl:border dark:border-0">
