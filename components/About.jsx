@@ -168,7 +168,7 @@ const About = () => {
                   </div> 
                 </TabsContent> 
                 <TabsContent value="skills"> 
-                  <div className="text-center xl:text-left"> 
+                  <div className="text-center xl:text-left mb-20"> 
                     <h3 className="h3 mb-8">What I Use</h3> 
                     {skillData.map((section, idx) => ( 
                       <div key={idx} className="mb-8"> 
