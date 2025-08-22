@@ -88,8 +88,8 @@ const About = () => {
     return arr.find(item => item.title.toLowerCase() === title.toLowerCase()); 
   }; 
   return ( 
-    <section className=" h-[85vh] "> 
-      <div className="container "> 
+    <section className=" h-[85vh] w-full "> 
+      <div className="container  "> 
         <h2 className="section-title mb-9 xl:mb-20 text-center mx-auto">About Me</h2> 
         <div className="flex flex-row xl:px-[7rem] px-4 "> 
           {/* left image */} 
