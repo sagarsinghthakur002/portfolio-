@@ -5,10 +5,10 @@ import "./globals.css";
 
 //components
 import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
+import Footer from "@/components/Footer";
 
 //theme provider
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeProvider } from "../components/Themeprovider";
 
 
 const geistSans = Geist({
@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         
-        {/* <Footer /> */}
+        <Footer />
         </ThemeProvider>
       </body>
     </html>

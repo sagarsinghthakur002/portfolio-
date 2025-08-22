@@ -15,37 +15,39 @@ import { Pagination } from "swiper/modules";
 
 import ProjectCard from "../components/ProjectCard";
 
+
+
 const projectData = [
   {
-    image: "/work/4.png",
+    image: "/img1.png",
     category: "react js",
-    name: "naxa website",
-    description: "Example description for project 1",
-    link: "/",
+    name: "Smart-Trip-AI",
+    description: "Smart Trip AI is a full-stack travel planning application built using Next.js, Firebase, Tailwind CSS, and Gemini AI.",
+    link: "https://smart-trip.netlify.app",
     github: "/",
   },
   {
-    image: "/work/3.png",
+    image: "/img2.png",
     category: "react js",
-    name: "naxa website",
+    name: "Nayaghar",
     description: "Example description for project 2",
-    link: "/",
+    link: "https://reall-estate.netlify.app",
     github: "/",
   },
   {
-    image: "/work/2.png",
-    category: "react js",
-    name: "naxa website",
+    image: "/img3.png",
+    category: "React ",
+    name: "CodeKala",
     description: "Example description for project 3",
-    link: "/",
+    link: "https://codekala.netlify.app",
     github: "/",
   },
   {
-    image: "/work/1.png",
-    category: "react js",
-    name: "naxa website",
+    image: "/img4.png",
+    category: "React",
+    name: "Triton College",
     description: "Example description for project 4",
-    link: "/",
+    link: "https://triton-college-website.vercel.app",
     github: "/",
   },
 ];

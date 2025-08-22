@@ -25,7 +25,7 @@ const Nav = ({
           <Link
             href={link.path}
             key={index}
-            className={`${linkStyles} ${isActive ? underlineStyles : ''}  `}
+            className={`${linkStyles}: ''}  `}
             aria-current={isActive ? 'page' : undefined}
           >
             {link.label}

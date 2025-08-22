@@ -12,37 +12,79 @@ import ProjectCard from "@/components/ProjectCard";
 // sample project data
 const projectData = [
   {
-    image: "/work/4.png",
-    category: "react js",
-    name: "naxa website",
-    description: "Example description for project 1",
-    link: "/",
+    image: "/img1.png",
+    category: "React",
+    name: "Smart-Trip-AI",
+    description: "Smart Trip AI is a full-stack travel planning application built using Next.js, Firebase, Tailwind CSS, and Gemini AI.",
+    link: "https://smart-trip.netlify.app",
     github: "/",
   },
   {
-    image: "/work/3.png",
-    category: "Nextjs",
-    name: "naxa website",
+    image: "/img2.png",
+    category: "React",
+    name: "Nayaghar",
     description: "Example description for project 2",
-    link: "/",
+    link: "https://reall-estate.netlify.app",
     github: "/",
   },
   {
-    image: "/work/2.png",
-    category: "react js",
-    name: "naxa website",
-    description: "Example description for project 3",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/1.png",
+    image: "/img3.png",
     category: "Javascript",
-    name: "naxa website",
+    name: "CodeKala",
+    description: "Example description for project 3",
+    link: "https://codekala.netlify.app",
+    github: "/",
+  },
+  {
+    image: "/img4.png",
+    category: "React",
+    name: "Triton College",
     description: "Example description for project 4",
+    link: "https://triton-college-website.vercel.app",
+    github: "/",
+  },
+  {
+    image: "/img5.png",
+    category: "Javascript",
+    name: "Third Eye Bakery",
+    description: "Example description for project 4",
+    link: "https://thirdeyes.netlify.app",
+    github: "/",
+  },
+  {
+    image: "/img6.png",
+    category: "Javascript",
+    name: "Deus Vestis",
+    description: "Example description for project 4",
+    link: "https://deus-vestis.netlify.app",
+    github: "/",
+  },
+  {
+    image: "/img7.png",
+    category: "Javascript",
+    name: "Coffee Corner",
+    description: "Example description for project 4",
+    link: "https://coffeecorn.netlify.app",
+    github: "/",
+  },
+  {
+    image: "/img8.png",
+    category: "Javascript",
+    name: "portfolio",
+    description: "Example description for project 4",
+    link: "https://coffeecorn.netlify.app",
+    github: "/",
+  },
+
+  {
+    image: "/",
+    category: "Nextjs",
+    name: "Interview Adda",
+    description: "nterview Adda lets you take AI-powered mock tests and get a summary of where to improve. ",
     link: "/",
     github: "/",
   },
+  
 ];
 
 // remove duplicates & add "all"
@@ -50,7 +92,7 @@ const uniqueCategories = ["all", ...new Set(projectData.map((item) => item.categ
 
 const Projects = () => {
   return (
-    <section className="min-h-screen pt-12 px-[1rem] xl:px-[7rem]">
+    <section className="min-h-screen pt-8 px-[1rem] xl:px-[7rem]">
       <div className="container">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
           My Projects
