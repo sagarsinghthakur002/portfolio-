@@ -23,7 +23,7 @@ const MobileNav = () => {
         
         <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
 
-        <div className="flex flex-col justify-between h-full py-8">
+        <div className="flex flex-col justify-between h-full py-2">
           <div className="flex flex-col items-center gap-y-16">
             <Logo />
             <Nav
