@@ -54,7 +54,7 @@ function Header() {
       transition={{ duration: 0.3 }}
     >
       <div className="container mx-auto max-w-7xl">
-        <div className="flex items-center justify-between py-2">
+        <div className="flex items-center justify-between xl:py-2">
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
             <Logo />
