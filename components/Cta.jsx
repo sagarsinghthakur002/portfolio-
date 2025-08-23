@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 const Cta = () => {
   return (
-    <section className="py-20 ">
+    <section className="py-15 p-[1rem] ">
       <div className="container mx-auto">
         <div className="flex flex-col items-center">
-          <h2 className="xl:h2 max-w-xl text-center mb-8 text-2xl">
+          <h2 className=" max-w-xl text-center mb-8 h3 font-bold">
             Prepared to turn your ideas into reality? I'm here to help
           </h2>
 

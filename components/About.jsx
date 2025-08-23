@@ -4,7 +4,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs" 
 import { User2, MailIcon, HomeIcon, PhoneCall, GraduationCap, Calendar, Briefcase } from "lucide-react"; 
 import { get } from "react-hook-form"; 
 import html from '../skill/html.png' 
-import css from '../skill/css.png' 
+// import css from '../skill/css.png' 
 import js from '../skill/js.png' 
 import react from '../skill/react.png' 
 import tailwind from '../skill/tailwind.png' 
@@ -65,12 +65,12 @@ const skillData = [
   { 
     title: "Skills", 
     data: [ 
-      { name: "HTML", imgPath: html }, 
-      { name: "CSS", imgPath: css }, 
-      { name: "Javascript", imgPath: js }, 
-      { name: "ReactJS", imgPath: react }, 
-      { name: "TailwindCSS", imgPath: tailwind }, 
-      { name: "Nextjs", imgPath: nextjs }, 
+      { name: "HTML", imgPath: "../component/skill/css.png" },
+      { name: "CSS", imgPath: html },
+      { name: "Javascript", imgPath: js },
+      { name: "ReactJS", imgPath: react },
+      { name: "TailwindCSS", imgPath: tailwind },
+      { name: "Nextjs", imgPath: nextjs },
     ], 
   }, 
   { 
@@ -177,8 +177,8 @@ const About = () => {
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6"> 
                           {section.data.map((item, index) => ( 
                             <div key={index} className="flex flex-col items-center gap-2 "> 
-                              <img src={item.imgPath} alt={item.name} className="w-12 h-12 object-contain" /> 
-                              <span className="text-sm text-gray-300">{item.name}</span> 
+                              {/* <img src={item.imgPath} alt={item.name} className="w-12 h-12 object-contain" />  */}
+                              <span className="text-[20px] text-primary font-semibold">{item.name}</span> 
                             </div> 
                           ))} 
                         </div> 

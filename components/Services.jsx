@@ -32,7 +32,7 @@ const Services = () => {
     return (
         <section className="mb-16 xl:mb-36 xl:px-[7rem] mt-20">
             <div className="container mx-auto px-4">
-                <h2 className="section-title mx-auto mb-16 text-center text-3xl font-bold xl:mb-24">
+                <h2 className="section-title mx-auto mb-16 text-center font-bold xl:mb-24">
                     My Services
                 </h2>
 
