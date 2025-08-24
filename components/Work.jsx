@@ -65,7 +65,7 @@ const Work = () => {
             tempora quo cum!
           </p>
 
-          <Link href="/project">
+          <Link href="/projects">
             <Button>All projects</Button>
           </Link>
         </div>
