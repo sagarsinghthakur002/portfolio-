@@ -32,9 +32,9 @@ const MobileNav = () => {
             />
           <Socials containerStyles="flex items-center gap-x-6  py-[22rem]" iconsStyles="text-2xl" />
           </div>
-          <div className="text-center text-sm text-gray-500">
-            © {new Date().getFullYear()} Sagar Thakur. All rights reserved.
-            </div>
+          {/* <div className="text-center text-sm text-gray-500">
+            © Sagar Thakur. All rights reserved.
+            </div> */}
             </div>  
         
       </SheetContent>

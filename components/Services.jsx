@@ -41,11 +41,11 @@ const Services = () => {
                     {ServicesData.map((item, index) => (
                         <Card
                             key={index}
-                            className="relative flex w-full max-w-[400px] flex-col items-center justify-center rounded-2xl border border-gray-200 bg-white p-8 shadow-md transition-all hover:-translate-y-2 hover:shadow-xl dark:border-gray-800 dark:bg-gray-900"
+                            className="relative flex w-full max-w-[400px] flex-col items-center justify-center rounded-2xl border border-gray-300 bg-white p-8 shadow-md transition-all hover:-translate-y-2 hover:shadow-xl dark:border-neutral-600 dark:bg-neutral-900"
                         >
                             {/* Rounded Icon */}
                             <CardHeader className="absolute -top-[40px] items-center justify-center">
-                                <div className="flex h-[80px] w-[80px] items-center justify-center rounded-full bg-gray-100 shadow-md dark:bg-gray-800 transition-transform hover:scale-105">
+                                <div className="flex h-[80px] w-[80px] items-center justify-center rounded-full bg-gray-100 shadow-md dark:bg-neutral-800 transition-transform hover:scale-105">
                                     {item.icon}
                                 </div>
                             </CardHeader>

@@ -22,7 +22,7 @@ const projectData = [
     image: "/img1.png",
     category: "react js",
     name: "Smart-Trip-AI",
-    description: "Smart Trip AI is a full-stack travel planning application built using Next.js, Firebase, Tailwind CSS, and Gemini AI.",
+    description: "Travel Planner — full-stack travel planning application built using Next.js, Firebase, Tailwind CSS, and Gemini AI.",
     link: "https://smart-trip.netlify.app",
     github: "/",
   },
@@ -30,23 +30,23 @@ const projectData = [
     image: "/img2.png",
     category: "react js",
     name: "Nayaghar",
-    description: "Example description for project 2",
+    description: "Real Estate — Responsive React + Tailwind platform with property listings, search & filters, detailed property views, and smooth animated navigation.",
     link: "https://reall-estate.netlify.app",
     github: "/",
   },
-  {
-    image: "/img3.png",
-    category: "React ",
-    name: "CodeKala",
-    description: "Example description for project 3",
-    link: "https://codekala.netlify.app",
-    github: "/",
-  },
+  // {
+  //   image: "/img3.png",
+  //   category: "React ",
+  //   name: "CodeKala",
+  //   description: "CodeKala Website — Responsive company website for IT services (Web Apps, Graphic Design, Marketing, etc.) built with HTML, CSS, and JavaScript, featuring AOS-powered animations, Slick slider, and a modern interactive design.",
+  //   link: "https://codekala.netlify.app",
+  //   github: "/",
+  // },
   {
     image: "/img4.png",
     category: "React",
     name: "Triton College",
-    description: "Example description for project 4",
+    description: "College Website — Modern React site with ShadCN UI, AOS animations, Slick slider, responsive design, and nteractive campus showcase..",
     link: "https://triton-college-website.vercel.app",
     github: "/",
   },
@@ -60,9 +60,7 @@ const Work = () => {
         <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
           <h2 className="section-title mb-4">Latest project</h2>
           <p className="subtitle mb-8">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus vero
-            laboriosam facere accusamus voluptatibus distinctio odio deleniti
-            tempora quo cum!
+            Explore some of my recent projects, where I combine modern design with efficient development practices. Each project reflects my focus on building responsive, user-friendly, and innovative digital solutions.
           </p>
 
           <Link href="/projects">
@@ -73,7 +71,7 @@ const Work = () => {
         {/* slider */}
         <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
           <Swiper
-            className="h-[480px]"
+            className="h-[500px]"
             slidesPerView={1}
             breakpoints={{
               640: { slidesPerView: 2 },

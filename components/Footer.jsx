@@ -1,6 +1,14 @@
+"use client";
+import { useEffect, useState } from "react";
 import Socials from './Socials';
 
 const Footer = () => {
+  const [year, setYear] = useState(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className='bg-tertiary dark:bg-secondary/40 py-6'>
       <div className='container mx-auto'>
@@ -12,7 +20,7 @@ const Footer = () => {
           />
           {/* copyright */}
           <div className='text-muted-foreground'>
-            Copyright © Sagar Thakur. All rights reserved.
+            Copyright © {year ?? ""} Sagar Thakur. All rights reserved.
           </div>
         </div>
       </div>
