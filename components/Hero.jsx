@@ -32,22 +32,19 @@ const Hero = () => {
               <Link href='/contact'>
                 <Button className='gap-x-2'>Contact me <Send size={18} /></Button>
               </Link>
-              <a href="/sagar-thakur-CV.pdf" download>
-  <Button 
-    variant="secondary" 
-    className="gap-x-2 border-2 border-gray-400 dark:border-gray-600"
-  >
-    Download CV
-    <Download size={18} />
-  </Button>
-</a>
+              <Link href="/sagarthakur.pdf" download>
+                <Button variant="secondary" className="gap-x-2 border-2 border-gray-400 dark:border-gray-600">
+                  Download CV
+                  <Download size={18} />
+                </Button>
+              </Link>
 
             </div>
-            
+
 
             {/* Socials */}
             <Socials
-              containerStyles="flex gap-x-6 mx-auto xl:mx-0 mt-5"
+              containerStyles="flex gap-x-6 mx-auto xl:mx-0 mt-5 "
               iconsStyles="text-foreground text-[25px] hover:text-primary transition-all cursor-pointer"
             />
           </div>
@@ -61,19 +58,19 @@ const Hero = () => {
             {/* badges */}
             {/* <div className="flex  gap-y-1 absolute dark:shadow-2xl-white top-0 left-0 flex-col z-10"> */}
             <Badge
-            containerStyles="absolute top-[24%] -left-[5rem] z-10"
-             icon={<RiBriefcase4Fill/> }
-            endCountNum={1}
-            badgeText="Year of Experience"  />
+              containerStyles="absolute top-[24%] -left-[5rem] z-10"
+              icon={<RiBriefcase4Fill />}
+              endCountNum={1}
+              badgeText="Year of Experience" />
             {/* </div> */}
 
             {/* badge2 */}
-             <Badge
-            containerStyles="absolute top-[70%] -left-[3rem] z-10"
-             icon={<RiTodoFill/> }
-            endCountNum={10}
-            endCountText={"+"}
-            badgeText="Finished Project"  />
+            <Badge
+              containerStyles="absolute top-[70%] -left-[3rem] z-10"
+              icon={<RiTodoFill />}
+              endCountNum={10}
+              endCountText={"+"}
+              badgeText="Finished Project" />
 
 
 
