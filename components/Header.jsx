@@ -3,37 +3,35 @@
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 import Logo from "./Logo";
 import ThemeToggler from "./ThemeToggler";
-import Nav from "./Nav";
-import MobileNav from "./MobileNav";
 
 function Header() {
   const [header, setHeader] = useState(false);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
+  // Handle scroll direction & header background
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
 
-      // Detect scroll direction
-      if (currentScrollY > lastScrollY) {
-        setIsScrollingUp(false);
-      } else {
-        setIsScrollingUp(true);
+          setIsScrollingUp(currentScrollY < lastScrollY);
+          setHeader(currentScrollY > 100);
+          setLastScrollY(currentScrollY);
+
+          ticking = false;
+        });
+        ticking = true;
       }
-
-      // Show header background when scrolling down
-      if (currentScrollY > 50) {
-        setHeader(true);
-      } else {
-        setHeader(false);
-      }
-
-      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -54,31 +52,102 @@ function Header() {
       transition={{ duration: 0.3 }}
     >
       <div className="container mx-auto max-w-7xl">
-        <div className="flex items-center justify-between xl:py-2">
+        <div className="flex items-center  justify-between xl:py-2">
           {/* Logo */}
-          <motion.div whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="flex-shrink-0"
+          >
             <Logo />
           </motion.div>
 
-          {/* Nav + Controls */}
-          <div className="flex items-center gap-x-8">
-            <Nav
-              containerStyles="hidden xl:flex gap-x-8 items-center"
-              linkStyles="relative px-2 py-1 text-sm font-medium hover:text-primary transition-all duration-200 group"
-              underlineStyles="absolute left-0 bottom-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-200"
-            />
+          {/* Desktop Nav */}
+          <nav
+    className="hidden xl:flex flex-1 justify-center gap-x-10"
+    role="navigation"
+    aria-label="Main menu"
+  >
+            <a
+              href="/"
+              className="relative px-2 py-1 text-sm font-medium hover:text-primary transition-all duration-200 group"
+    
+            >
+              Home
+              <span className="absolute left-0 bottom-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-200" />
+            </a>
+            <a
+              href="/projects"
+              className="relative px-2 py-1 text-sm font-medium hover:text-primary transition-all duration-200 group"
+            >
+              My projecs
+              <span className="absolute left-0 bottom-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-200" />
+            </a>
+            
+            <a
+              href="/contact"
+              className="relative px-2 py-1 text-sm font-medium hover:text-primary transition-all duration-200 group"
+            >
+              Contact
+              <span className="absolute left-0 bottom-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-200" />
+            </a>
+          </nav>
 
+          {/* Controls */}
+          <div className="flex items-center gap-x-6">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <ThemeToggler />
             </motion.div>
 
-            {/* Mobile Nav */}
-            <div className="xl:hidden">
-              <MobileNav />
-            </div>
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="xl:hidden text-gray-800 dark:text-white"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+            >
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Nav */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.nav
+            id="mobile-menu"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="xl:hidden mt-4 flex flex-col gap-4 bg-white dark:bg-accent/90 shadow-lg rounded-xl p-6 mx-4"
+          >
+            <a
+              href="/"
+              className="text-sm font-medium hover:text-primary transition"
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </a>
+            <a
+              href="/projects"
+              className="text-sm font-medium hover:text-primary transition"
+              onClick={() => setIsOpen(false)}
+            >
+              My Projects
+            </a>
+            
+            <a
+              href="/contact"
+              className="text-sm font-medium hover:text-primary transition"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </a>
+          </motion.nav>
+        )}
+      </AnimatePresence>
 
       {/* Divider when scrolled */}
       <AnimatePresence>

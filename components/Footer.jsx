@@ -19,7 +19,7 @@ const Footer = () => {
             iconsStyles='text-primary dark:text-white/70 text-[20px] hover:text-white dark:hover:text-primary transition-all'
           />
           {/* copyright */}
-          <div className='text-muted-foreground items-center justify-between'>
+          <div className='text-muted-foreground items-center text-center'>
             Copyright © {year ?? ""} Sagar Thakur. All rights reserved.
           </div>
         </div>
