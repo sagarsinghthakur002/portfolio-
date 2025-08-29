@@ -121,7 +121,7 @@ function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="xl:hidden mt-4 flex flex-col gap-4 bg-white dark:bg-accent/90 shadow-lg rounded-xl p-6 mx-4"
+            className="xl:hidden mt-4 flex flex-col gap-4 bg-white dark:bg-accent/90 shadow-lg rounded-xl p-6 mx-4 items-center justify-center"
           >
             <a
               href="/"
