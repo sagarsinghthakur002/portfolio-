@@ -75,6 +75,14 @@ const projectData = [
     link: "https://coffeecorn.netlify.app",
     github: "/",
   },
+  {
+    image: "/img9.png",
+    category: "React",
+    name: "Deepal",
+    description: "Deepal Car Landing Page — Modern, high-performance landing page built with React.js, CSS, and Vite, featuring a clean layout, responsive design, smooth animations, and an engaging UI tailored for automotive branding. ",
+    link: "/https://deepal-evolution.netlify.app",
+    github: "/",
+  },
 
   {
     image: "/",
