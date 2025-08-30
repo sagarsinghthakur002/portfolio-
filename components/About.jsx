@@ -64,7 +64,7 @@ const About = () => {
     <section className="py-12 xl:py-24 min-h-[auto] xl:min-h-[860px]">
       <div className="container mx-auto">
         <h2 className="section-title mb-12 xl:mb-20 text-center mx-auto">About Me</h2> 
-        <div className="flex flex-col xl:flex-row gap-x-12 gap-y-10 xl:px-[7rem] px-[1rem]">
+        <div className="flex flex-col xl:flex-row gap-x-12 gap-y-10 xl:px-[6rem] px-[1rem]">
           <div className="flex-1"> 
             <Tabs defaultValue="personal" className="w-full"> 
               <TabsList className="grid grid-cols-3 md:w-full xl:border dark:xl:border-none mx-auto xl:mx-0 h-fit"> 
