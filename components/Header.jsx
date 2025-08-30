@@ -52,7 +52,7 @@ function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="container mx-auto max-w-7xl  px-[1rem]">
+      <div className="container mx-auto max-w-7xl  ">
         <div className="flex items-center  justify-between xl:py-2">
           {/* Logo */}
           <motion.div
@@ -65,7 +65,7 @@ function Header() {
 
           {/* Desktop Nav */}
           <nav
-            className="hidden xl:flex flex-1 justify-center "
+            className="hidden xl:flex flex-1 justify-center gap-x-8 "
             role="navigation"
             aria-label="Main menu"
           >
