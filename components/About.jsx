@@ -83,7 +83,7 @@ const About = () => {
                         return ( 
                           <div key={index} className="flex items-center gap-x-4 mx-auto xl:mx-0 justify-center xl:justify-start"> 
                             <div className="text-primary">{item.icon}</div> 
-                            <div className="font-medium">{item.text}</div> 
+                            <div className="font-normal">{item.text}</div> 
                           </div> 
                         ); 
                       })} 
