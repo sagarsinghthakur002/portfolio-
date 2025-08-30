@@ -52,7 +52,7 @@ function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto max-w-7xl  px-[1rem]">
         <div className="flex items-center  justify-between xl:py-2">
           {/* Logo */}
           <motion.div
@@ -65,14 +65,14 @@ function Header() {
 
           {/* Desktop Nav */}
           <nav
-    className="hidden xl:flex flex-1 justify-center gap-x-10"
-    role="navigation"
-    aria-label="Main menu"
-  >
+            className="hidden xl:flex flex-1 justify-center "
+            role="navigation"
+            aria-label="Main menu"
+          >
             <a
               href="/"
               className="relative px-2 py-1 text-sm font-medium hover:text-primary transition-all duration-200 group"
-    
+
             >
               Home
               <span className="absolute left-0 bottom-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-200" />
@@ -84,7 +84,7 @@ function Header() {
               My projecs
               <span className="absolute left-0 bottom-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-200" />
             </a>
-            
+
             <a
               href="/contact"
               className="relative px-2 py-1 text-sm font-medium hover:text-primary transition-all duration-200 group"
@@ -138,7 +138,7 @@ function Header() {
             >
               My Projects
             </a>
-            
+
             <a
               href="/contact"
               className="text-sm font-medium hover:text-primary transition"
@@ -146,9 +146,9 @@ function Header() {
             >
               Contact
             </a>
-            
-            
-            
+
+
+
           </motion.nav>
         )}
       </AnimatePresence>
