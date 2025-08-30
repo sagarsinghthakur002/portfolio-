@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
 import ThemeToggler from "./ThemeToggler";
 
+
 function Header() {
   const [header, setHeader] = useState(false);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
@@ -145,6 +146,9 @@ function Header() {
             >
               Contact
             </a>
+            
+            
+            
           </motion.nav>
         )}
       </AnimatePresence>
