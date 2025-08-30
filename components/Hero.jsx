@@ -25,7 +25,7 @@ const Hero = () => {
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left gap-y-4" >
             <div className="text-sm uppercase font-semibold  text-primary tracking-[4px] xl:-mt-[70px] ">web Developer</div>
             <h1 className="h1 mb-4 ">Hello, my name is Sagar Thkaur</h1>
-            <p className="subtitle max-w-[490px] mx-auto xl:mx-0"> I am a Full-Stack web developer currently working on NextJS and PostgreSQL.As a highly adaptable and skilled web developer,I am passionate about creating functional and aesthetically pleasing websites that provide a great user experience.</p>
+            <p className="subtitle max-w-[490px] mx-auto xl:mx-0">I’m a Front-End Developer specializing in Next.js, React, and Tailwind CSS. Passionate about creating responsive, visually appealing, and user-friendly websites, I focus on blending design with functionality to deliver seamless digital experiences.</p>
 
             {/* Buttons */}
             <div className="flex flex-col gap-y-4 md:flex-row gap-x-3 mx-auto xl:mx-0  -mt-[4px]">
