@@ -27,7 +27,7 @@ export default function Hero() {
             </div>
 
 
-            <h1 className="h1 mb-3 min-h-[90px] xl:min-h-[160px]">
+            <h1 className="h1 xl:mb-3 mb-1 min-h-[85px] xl:min-h-[160px]">
               <ReactTyped
                 strings={[
                   "Hello, my name is Sagar Thakur",
@@ -49,7 +49,7 @@ export default function Hero() {
             </p>
 
 
-            <div className="flex flex-col gap-y-4 md:flex-row gap-x-3 mx-auto xl:mx-0 -mt-[4px]">
+            <div className="flex flex-col gap-y-4 md:flex-row gap-x-5 mx-auto xl:mx-0 -mt-[4px]">
               <Link href="/contact">
                 <Button className="gap-x-2">
                   Contact me <Send size={18} />

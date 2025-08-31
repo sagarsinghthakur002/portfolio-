@@ -147,7 +147,7 @@
 
  
 .subtitle {
-  @apply text-muted-foreground text-lg mb-8 font-light;
+  @apply text-muted-foreground xl:text-lg text-[15px] mb-8 font-light;
 }
 
 /* Light background shape */
