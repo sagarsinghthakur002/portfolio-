@@ -91,60 +91,78 @@ const About = () => {
                   </div> 
                 </TabsContent> 
                 
-                <TabsContent value="qualification"> 
-                  <div>
-                    <h3 className="h3 mb-8 text-center xl:text-left">My Awesome Journey</h3> 
-                    <div className="grid md:grid-cols-2 gap-y-10 gap-x-8"> 
-                      <div className="flex flex-col gap-y-6"> 
-                        <div className="flex gap-x-4 items-center text-[22px] text-primary"> 
-                          <Briefcase /> 
-                          <h4 className="capitalize font-semibold text-xl">{getData(qualificationData, "Experience").title}</h4> 
-                        </div> 
-                        <div className="flex flex-col gap-y-8"> 
-                          {getData(qualificationData, "Experience").data.map((item, index) => { 
-                            const { company, role, year } = item; 
-                            return ( 
-                              <div key={index} className="flex gap-x-6 group"> 
-                                <div className="h-[84px] w-[1px] bg-border relative ml-2">
-                                  <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] top-0"></div>
-                                </div>
-                                <div className="flex-1"> 
-                                  <div className="font-semibold text-xl leading-snug mb-1">{company}</div> 
-                                  <div className="text-lg leading-snug text-muted-foreground mb-2">{role}</div> 
-                                  <div className="text-base font-medium text-muted-foreground/80">{year}</div> 
-                                </div> 
-                              </div> 
-                            ); 
-                          })} 
-                        </div> 
-                      </div> 
-                  
-                      <div className="flex flex-col gap-y-6"> 
-                        <div className="flex gap-x-4 items-center text-[22px] text-primary"> 
-                          <GraduationCap /> 
-                          <h4 className="capitalize font-semibold text-xl">{getData(qualificationData, "Education").title}</h4> 
-                        </div> 
-                        <div className="flex flex-col gap-y-8"> 
-                          {getData(qualificationData, "Education").data.map((item, index) => { 
-                            const { university, qualification, year } = item; 
-                            return ( 
-                              <div key={index} className="flex gap-x-6 group"> 
-                                <div className="h-[84px] w-[1px] bg-border relative ml-2">
-                                  <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] top-0"></div>
-                                </div>
-                                <div className="flex-1"> 
-                                  <div className="font-semibold text-xl leading-snug mb-1">{university}</div> 
-                                  <div className="text-lg leading-snug text-muted-foreground mb-2">{qualification}</div> 
-                                  <div className="text-base font-medium text-muted-foreground/80">{year}</div> 
-                                </div> 
-                              </div> 
-                            ); 
-                          })} 
-                        </div> 
-                      </div> 
-                    </div>
-                  </div>
-                </TabsContent> 
+      <TabsContent value="qualification">
+  <div>
+    <h3 className="h3 mb-8 text-center xl:text-left">My Awesome Journey</h3>
+
+    <div className="grid md:grid-cols-2 gap-y-10 gap-x-8">
+      {/* Experience */}
+      <div className="flex flex-col gap-y-6">
+        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+          <Briefcase />
+          <h4 className="capitalize font-semibold text-xl">
+            {getData(qualificationData, "Experience").title}
+          </h4>
+        </div>
+
+        <div className="flex flex-col gap-y-8">
+          {getData(qualificationData, "Experience").data.map((item, index) => {
+            const { company, role, year } = item;
+            return (
+              <div key={index} className="flex gap-x-6 group cursor-pointer">
+                {/* Timeline line + dot */}
+                <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                  <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] top-0 timeline-dot"></div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1">
+                  <div className="font-semibold text-xl leading-snug mb-1">{company}</div>
+                  <div className="text-lg leading-snug text-muted-foreground mb-2">{role}</div>
+                  <div className="text-base font-medium text-muted-foreground/80">{year}</div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Education */}
+      <div className="flex flex-col gap-y-6">
+        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+          <GraduationCap />
+          <h4 className="capitalize font-semibold text-xl">
+            {getData(qualificationData, "Education").title}
+          </h4>
+        </div>
+
+        <div className="flex flex-col gap-y-8">
+          {getData(qualificationData, "Education").data.map((item, index) => {
+            const { university, qualification, year } = item;
+            return (
+              <div key={index} className="flex gap-x-6 group cursor-pointer">
+                {/* Timeline line + dot */}
+                <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                  <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] top-0 timeline-dot"></div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1">
+                  <div className="font-semibold text-xl leading-snug mb-1">{university}</div>
+                  <div className="text-lg leading-snug text-muted-foreground mb-2">{qualification}</div>
+                  <div className="text-base font-medium text-muted-foreground/80">{year}</div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  </div>
+</TabsContent>
+
+
+
                 
                 <TabsContent value="skills"> 
                   <div className="text-center xl:text-left space-y-12"> 

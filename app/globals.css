@@ -204,6 +204,36 @@
 
 
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Quick move down */
+@keyframes dot-down {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(70px); }
+}
+
+/* Smooth move back up */
+@keyframes dot-up {
+  0%   { transform: translateY(70px); }
+  100% { transform: translateY(0); }
+}
+
+.timeline-dot {
+  transition: transform 0.4s ease-out; /* fallback */
+}
+
+/* On hover → animate down */
+.group:hover .timeline-dot {
+  animation: dot-down 1.2s ease-out forwards;
+}
+
+/* On unhover → animate back up */
+.group:not(:hover) .timeline-dot {
+  animation: dot-up 1.2s ease-in-out forwards;
+}
+
 
 
 

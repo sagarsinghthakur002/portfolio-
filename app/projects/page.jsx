@@ -92,7 +92,7 @@ const projectData = [
     link: "/",
     github: "/",
   },
-  
+
 ];
 
 // remove duplicates & add "all"

@@ -37,7 +37,7 @@ const Socials = ({ containerStyles, iconsStyles }) => {
       {icons.map((icon, index) => (
         <Link href={icon.path} key={index} target="_blank"
           rel="noopener noreferrer">
-          <div className={`${iconsStyles}`}>{icon.name}</div>
+          <div className={`${iconsStyles}  transform hover:scale-113 transition duration-300 `}>{icon.name}</div>
         </Link>
       ))}
     </div>
