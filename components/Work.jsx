@@ -57,7 +57,7 @@ const Work = () => {
     <section className="relative mb-12 xl:mb-28 xl:px-[7rem] px-[1rem] ">
       <div className="container mx-auto">
         {/* text */}
-        <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
+        <div className="max-w-[350px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
           <h2 className="section-title mb-4">Latest project</h2>
           <p className="subtitle mb-8 xl:mr-4">
             Explore some of my recent projects, where I combine modern design with efficient development practices. Each project reflects my focus on building responsive, user-friendly, and innovative digital solutions.
@@ -69,7 +69,7 @@ const Work = () => {
         </div>
 
         {/* slider */}
-        <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
+        <div className="xl:max-w-[950px] xl:absolute right-[7rem] top-0">
           <Swiper
             className="h-[500px]"
             slidesPerView={1}
