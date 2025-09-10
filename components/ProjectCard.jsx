@@ -65,7 +65,7 @@ const ProjectCard = ({ project }) => {
         <h4 className="h4 mb-1">{project.name}</h4>
 
         {/* Project description */}
-        <p className="text-muted-foreground text-lg">
+        <p className="text-muted-foreground text-[15px]">
           {project.description}
         </p>
       </div>

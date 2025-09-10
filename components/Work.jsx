@@ -22,7 +22,7 @@ const projectData = [
     image: "/img1.png",
     category: "react js",
     name: "Smart-Trip-AI",
-    description: "Travel Planner — full-stack travel planning application built using Next.js, Firebase, Tailwind CSS, and Gemini AI.",
+    description: "Travel Planner — A full-stack travel planning application built with Next.js, Firebase, Tailwind, Gemini AI & additional frameworks/libraries such as ShadCN, AOS & Slick",
     link: "https://smart-trip.netlify.app",
     github: "/",
   },
