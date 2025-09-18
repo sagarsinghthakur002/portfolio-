@@ -11,12 +11,12 @@ const ProjectCard = ({ project }) => {
     <Card className="relative overflow-hidden group"> {/* ✅ Added group here */}
       <CardHeader className="relative">
         {/* Project Image */}
-        <div className="relative w-full h-56">
+        <div className="relative w-full ">
           <Image
             src={project.image}
             alt={project.name}
             width={500}
-  height={500}
+            height={500}
             // fill
             className="object-cover shadow-2xl"
             priority
@@ -55,7 +55,7 @@ const ProjectCard = ({ project }) => {
       </CardHeader>
 
       {/* Card Content */}
-      <div className="h-full px-8 py-6">
+      <div className="h-full px-8 py-1">
         {/* Category */}
         <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">
           {project.category}

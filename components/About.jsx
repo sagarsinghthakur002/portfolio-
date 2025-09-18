@@ -1,14 +1,15 @@
-import DevImg from "./DevImg"; 
-import sagar from '../hero/sagar.png' 
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs" 
-import { User2, MailIcon, HomeIcon, PhoneCall, GraduationCap, Calendar, Briefcase } from "lucide-react"; 
-import { get } from "react-hook-form"; 
-import html from '../skill/html.png' 
-import css from '../skill/css.png' 
-import js from '../skill/js.png' 
-import react from '../skill/react.png' 
-import tailwind from '../skill/tailwind.png' 
-import nextjs from '../skill/nextjs.png' 
+import DevImg from "./DevImg";
+import sagar from "../hero/sagar.png"; 
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { 
+  User2, 
+  MailIcon, 
+  HomeIcon, 
+  PhoneCall, 
+  GraduationCap, 
+  Calendar, 
+  Briefcase 
+} from "lucide-react"; 
 
 const infoData = [ 
   { icon: <User2 size={20} />, text: "Sagar Thakur" }, 
@@ -34,23 +35,24 @@ const qualificationData = [
   }
 ]; 
 
+// ✅ Updated to use /public/skill/ paths
 const skillData = [ 
   { 
     title: "Skills", 
     data: [ 
-      { name: "HTML", imgPath: html },
-      { name: "CSS", imgPath: css },
-      { name: "Javascript", imgPath: js },
-      { name: "ReactJS", imgPath: react },
-      { name: "TailwindCSS", imgPath: tailwind },
-      { name: "Nextjs", imgPath: nextjs }
+      { name: "HTML", imgPath: "/skill/html.png" },
+      { name: "CSS", imgPath: "/skill/css.png" },
+      { name: "Javascript", imgPath: "/skill/js.png" },
+      { name: "ReactJS", imgPath: "/skill/react.png" },
+      { name: "TailwindCSS", imgPath: "/skill/tailwind.png" },
+      { name: "Nextjs", imgPath: "/skill/nextjs.png" }
     ] 
   }, 
   { 
     title: "Tools", 
     data: [ 
-      { name: "VSCode", imgPath: "/components/skill/vscode.webp" }, 
-      { name: "Figma", imgPath: "/components/skill/figma.webp" }
+      { name: "VSCode", imgPath: "/skill/vs.png" }, 
+      // { name: "Figma", imgPath: "/skill/figma.webp" }
     ] 
   }
 ]; 
@@ -64,109 +66,110 @@ const About = () => {
     <section className="py-12 xl:py-24 min-h-[auto] xl:min-h-[860px]">
       <div className="container mx-auto">
         <h2 className="section-title mb-12 xl:mb-20 text-center mx-auto">About Me</h2> 
+
         <div className="flex flex-col xl:flex-row gap-x-12 gap-y-10 xl:px-[6rem] px-[1rem]">
           <div className="flex-1"> 
             <Tabs defaultValue="personal" className="w-full"> 
               <TabsList className="grid grid-cols-3 md:w-full xl:border dark:xl:border-none mx-auto xl:mx-0 h-fit"> 
                 <TabsTrigger className="w-auto" value="personal">Personal Info</TabsTrigger> 
                 <TabsTrigger className="w-auto" value="qualification">Qualification</TabsTrigger> 
-                <TabsTrigger className="w-auto" value="skills">Skills&Tools</TabsTrigger> 
+                <TabsTrigger className="w-auto" value="skills">Skills & Tools</TabsTrigger> 
               </TabsList> 
               
               <div className="text-lg mt-12 xl:mt-10"> 
+                
+                {/* Personal Info */}
                 <TabsContent value="personal"> 
                   <div className="text-center xl:text-left space-y-8"> 
-                    <h3 className="h3">Building scalable and user-friendly web apps for 1 years.</h3> 
-                    <p className="subtitle max-w-xl mx-auto xl:mx-0">Blending creativity with clean code, I design and build web applications that are not only scalable but also intuitive and visually engaging.</p> 
+                    <h3 className="h3">Building scalable and user-friendly web apps for 1 year.</h3> 
+                    <p className="subtitle max-w-xl mx-auto xl:mx-0">
+                      Blending creativity with clean code, I design and build web applications 
+                      that are not only scalable but also intuitive and visually engaging.
+                    </p> 
+
                     <div className="grid xl:grid-cols-2 gap-x-6 gap-y-4 mb-12"> 
-                      {infoData.map((item, index) => { 
-                        return ( 
-                          <div key={index} className="flex items-center gap-x-4 mx-auto xl:mx-0 justify-center xl:justify-start"> 
-                            <div className="text-primary">{item.icon}</div> 
-                            <div className="font-normal">{item.text}</div> 
-                          </div> 
-                        ); 
-                      })} 
+                      {infoData.map((item, index) => ( 
+                        <div key={index} className="flex items-center gap-x-4 mx-auto xl:mx-0 justify-center xl:justify-start"> 
+                          <div className="text-primary">{item.icon}</div> 
+                          <div className="font-normal">{item.text}</div> 
+                        </div> 
+                      ))} 
                     </div> 
                   </div> 
                 </TabsContent> 
                 
-      <TabsContent value="qualification">
-  <div>
-    <h3 className="h3 mb-8 text-center xl:text-left">My Awesome Journey</h3>
+                {/* Qualification */}
+                <TabsContent value="qualification">
+                  <div>
+                    <h3 className="h3 mb-8 text-center xl:text-left">My Awesome Journey</h3>
 
-    <div className="grid md:grid-cols-2 gap-y-10 gap-x-8">
-      {/* Experience */}
-      <div className="flex flex-col gap-y-6">
-        <div className="flex gap-x-4 items-center text-[22px] text-primary">
-          <Briefcase />
-          <h4 className="capitalize font-semibold text-xl">
-            {getData(qualificationData, "Experience").title}
-          </h4>
-        </div>
+                    <div className="grid md:grid-cols-2 gap-y-10 gap-x-8">
+                      
+                      {/* Experience */}
+                      <div className="flex flex-col gap-y-6">
+                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                          <Briefcase />
+                          <h4 className="capitalize font-semibold text-xl">
+                            {getData(qualificationData, "Experience").title}
+                          </h4>
+                        </div>
 
-        <div className="flex flex-col gap-y-8">
-          {getData(qualificationData, "Experience").data.map((item, index) => {
-            const { company, role, year } = item;
-            return (
-              <div key={index} className="flex gap-x-6 group cursor-pointer">
-                {/* Timeline line + dot */}
-                <div className="h-[84px] w-[1px] bg-border relative ml-2">
-                  <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] top-0 timeline-dot"></div>
-                </div>
+                        <div className="flex flex-col gap-y-8">
+                          {getData(qualificationData, "Experience").data.map((item, index) => {
+                            const { company, role, year } = item;
+                            return (
+                              <div key={index} className="flex gap-x-6 group cursor-pointer">
+                                <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                                  <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] top-0"></div>
+                                </div>
+                                <div className="flex-1">
+                                  <div className="font-semibold text-xl leading-snug mb-1">{company}</div>
+                                  <div className="text-lg leading-snug text-muted-foreground mb-2">{role}</div>
+                                  <div className="text-base font-medium text-muted-foreground/80">{year}</div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
 
-                {/* Content */}
-                <div className="flex-1">
-                  <div className="font-semibold text-xl leading-snug mb-1">{company}</div>
-                  <div className="text-lg leading-snug text-muted-foreground mb-2">{role}</div>
-                  <div className="text-base font-medium text-muted-foreground/80">{year}</div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+                      {/* Education */}
+                      <div className="flex flex-col gap-y-6">
+                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                          <GraduationCap />
+                          <h4 className="capitalize font-semibold text-xl">
+                            {getData(qualificationData, "Education").title}
+                          </h4>
+                        </div>
 
-      {/* Education */}
-      <div className="flex flex-col gap-y-6">
-        <div className="flex gap-x-4 items-center text-[22px] text-primary">
-          <GraduationCap />
-          <h4 className="capitalize font-semibold text-xl">
-            {getData(qualificationData, "Education").title}
-          </h4>
-        </div>
+                        <div className="flex flex-col gap-y-8">
+                          {getData(qualificationData, "Education").data.map((item, index) => {
+                            const { university, qualification, year } = item;
+                            return (
+                              <div key={index} className="flex gap-x-6 group cursor-pointer">
+                                <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                                  <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] top-0"></div>
+                                </div>
+                                <div className="flex-1">
+                                  <div className="font-semibold text-xl leading-snug mb-1">{university}</div>
+                                  <div className="text-lg leading-snug text-muted-foreground mb-2">{qualification}</div>
+                                  <div className="text-base font-medium text-muted-foreground/80">{year}</div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
 
-        <div className="flex flex-col gap-y-8">
-          {getData(qualificationData, "Education").data.map((item, index) => {
-            const { university, qualification, year } = item;
-            return (
-              <div key={index} className="flex gap-x-6 group cursor-pointer">
-                {/* Timeline line + dot */}
-                <div className="h-[84px] w-[1px] bg-border relative ml-2">
-                  <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] top-0 timeline-dot"></div>
-                </div>
-
-                {/* Content */}
-                <div className="flex-1">
-                  <div className="font-semibold text-xl leading-snug mb-1">{university}</div>
-                  <div className="text-lg leading-snug text-muted-foreground mb-2">{qualification}</div>
-                  <div className="text-base font-medium text-muted-foreground/80">{year}</div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
-  </div>
-</TabsContent>
-
-
-
-                
+                {/* Skills & Tools */}
                 <TabsContent value="skills"> 
                   <div className="text-center xl:text-left space-y-12"> 
                     <h3 className="h3">What I Use</h3> 
+
+                    {/* Skills */}
                     <div>
                       <h4 className="text-xl font-semibold mb-4">Skills</h4>
                       <div className="border-b border-border mb-6"></div>
@@ -179,6 +182,8 @@ const About = () => {
                         ))} 
                       </div> 
                     </div>
+
+                    {/* Tools */}
                     <div>
                       <h4 className="text-xl font-semibold mb-4">Tools</h4>
                       <div className="border-b border-border mb-6"></div>
@@ -193,6 +198,7 @@ const About = () => {
                     </div>
                   </div> 
                 </TabsContent> 
+
               </div> 
             </Tabs> 
           </div> 
