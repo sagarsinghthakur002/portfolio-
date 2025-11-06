@@ -85,7 +85,7 @@ const projectData = [
   },
 
   {
-    image: "/",
+    image: "/img10.png",
     category: "Nextjs",
     name: "Interview Adda",
     description: "nterview Adda lets you take AI-powered mock tests and get a summary of where to improve. ",
@@ -94,6 +94,8 @@ const projectData = [
   },
 
 ];
+
+
 
 // remove duplicates & add "all"
 const uniqueCategories = ["all", ...new Set(projectData.map((item) => item.category))];

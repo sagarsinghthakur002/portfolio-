@@ -2,6 +2,12 @@ import React from "react";
 import { MailIcon, HomeIcon, PhoneCall } from "lucide-react";
 import Form from "@/components/Form";
 
+export const metadata = {
+  title: "Sagar Thakur - Portfolio",
+  description:
+    "Portfolio of Sagar Thakur, Front_End  Developer. Explore projects, services, and contact details.",
+};
+
 const Contact = () => {
   return (
     <section>

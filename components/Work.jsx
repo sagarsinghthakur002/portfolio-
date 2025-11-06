@@ -18,6 +18,16 @@ import ProjectCard from "../components/ProjectCard";
 
 
 const projectData = [
+
+  {
+    image: "/img10.png",
+    category: "Nextjs",
+    name: "Interview Adda",
+    description: "nterview Adda lets you take AI-powered mock tests and get a summary of where to improve. ",
+    link: "/",
+    github: "/",
+  },
+
   {
     image: "/img1.png",
     category: "react js",
