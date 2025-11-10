@@ -92,6 +92,14 @@ const projectData = [
     link: "/",
     github: "/",
   },
+  {
+    image: "/img11.png",
+    category: "Nextjs",
+    name: "naved suppliers",
+    description: "nterview Adda lets you take AI-powered mock tests and get a summary of where to improve. ",
+    link: "https://dry-fish-wholesale.vercel.app",
+    github: "/",
+  },
 
 ];
 
