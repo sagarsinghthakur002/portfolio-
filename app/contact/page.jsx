@@ -22,7 +22,9 @@ const Contact = () => {
             <h1 className="h1 max-w-md mb-8">Let's Work Together</h1>
           </div>
           {/* illusirations */}
-          <div className="hidden xl:flex w-full bg-contact bg-contain bg-top bg-no-repeat"></div>
+          <div className="hidden xl:flex w-full bg-contact bg-contain bg-top bg-no-repeat">
+            
+          </div>
         </div>
         <div>
           {/* info */}
