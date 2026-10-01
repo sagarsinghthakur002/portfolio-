@@ -101,6 +101,15 @@ const projectData = [
     github: "/",
   },
 
+  {
+    image: "/img11.png",
+    category: "typescript",
+    name: "naved suppliers",
+    description: "nterview Adda lets you take AI-powered mock tests and get a summary of where to improve. ",
+    link: "https://dry-fish-wholesale.vercel.app",
+    github: "/",
+  },
+
 ];
 
 
